@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dikdik Musfar Pribadi Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-slate-50 dark:bg-slate-900 text-slate-800 dark:text-slate-300 antialiased selection:bg-blue-200 dark:selection:bg-cyan-500/30 selection:text-blue-900 dark:selection:text-cyan-200 transition-colors duration-300">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 transition-all duration-300">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold text-slate-900 dark:text-white tracking-tight">Dikdik <span class="text-blue-600 dark:text-cyan-400">Musfar</span></a>
+            
+            <div class="flex items-center gap-6">
+                <div class="hidden md:flex space-x-8 text-sm font-semibold text-slate-600 dark:text-slate-400">
+                    <a href="#about" class="hover:text-blue-600 dark:hover:text-cyan-400 transition">About</a>
+                    <a href="#skills" class="hover:text-blue-600 dark:hover:text-cyan-400 transition">Skills</a>
+                    <a href="#experience" class="hover:text-blue-600 dark:hover:text-cyan-400 transition">Experience</a>
+                    <a href="#projects" class="hover:text-blue-600 dark:hover:text-cyan-400 transition">Projects</a>
+                    <a href="#education" class="hover:text-blue-600 dark:hover:text-cyan-400 transition">Education</a>
+                </div>
+                
+                <!-- Theme Toggle Button -->
+                <button id="theme-toggle" class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-sm font-medium hover:ring-2 hover:ring-blue-500 dark:hover:ring-cyan-400 transition">
+                    <span class="text-lg">🌓</span> <span class="hidden sm:inline">Theme</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="about" class="pt-32 pb-20 px-4">
+        <div class="max-w-6xl mx-auto flex flex-col-reverse md:flex-row items-center gap-12">
+            <!-- Text Content -->
+            <div class="flex-1 space-y-6 text-center md:text-left">
+                <div class="inline-block px-4 py-1.5 bg-blue-100 dark:bg-cyan-900/30 border border-blue-200 dark:border-cyan-500/30 text-blue-800 dark:text-cyan-400 font-semibold text-sm rounded-full transition-colors duration-300">
+                    Data & Business Intelligence Analyst
+                </div>
+                <h1 class="text-5xl md:text-6xl font-extrabold text-slate-900 dark:text-white leading-tight transition-colors duration-300">
+                    Transforming massive data into <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-cyan-400 dark:to-blue-500">strategic decisions</span>
+                </h1>
+                <p class="text-lg text-slate-600 dark:text-slate-400 leading-relaxed max-w-2xl mx-auto md:mx-0 transition-colors duration-300">
+                    Results driven Data and Business Intelligence Analyst with 4 years of cross industry experience across Banking FMCG and the Public Sector. I leverage a strong technical foundation in full stack development to manage end to end data lifecycles from building automated extraction pipelines to designing executive dashboards. Proven track record of delivering high impact solutions optimizing resource allocation for 4500 institutions and accelerating insight delivery to drive business growth.
+                </p>
+                <div class="flex flex-wrap justify-center md:justify-start gap-4 pt-4">
+                    <a href="mailto:dikdikmusfar@gmail.com" class="px-6 py-3 bg-blue-600 dark:bg-cyan-500 text-white dark:text-slate-900 font-bold rounded-lg hover:bg-blue-700 dark:hover:bg-cyan-400 transition shadow-lg shadow-blue-200 dark:shadow-[0_0_15px_rgba(6,182,212,0.4)]">
+                        Email Me
+                    </a>
+                    <a href="http://linkedin.com/in/dikdikmusfar/" class="px-6 py-3 bg-white dark:bg-slate-800 text-slate-700 dark:text-white font-semibold rounded-lg border border-slate-300 dark:border-slate-700 hover:border-blue-500 dark:hover:border-cyan-400 transition shadow-sm">
+                        LinkedIn Profile
+                    </a>
+                    <span class="px-6 py-3 text-slate-500 dark:text-slate-500 font-medium flex items-center transition-colors duration-300">
+                        Bandung INA
+                    </span>
+                </div>
+            </div>
+            
+            <!-- Profile Photo -->
+            <div class="w-56 h-56 md:w-80 md:h-80 shrink-0 relative">
+                <div class="absolute inset-0 bg-blue-500 dark:bg-cyan-500 rounded-full blur-[40px] md:blur-[50px] opacity-20 transition-colors duration-300"></div>
+                <!-- GANTI "URL_FOTO_KAMU_DISINI.jpg" DENGAN NAMA FILE ATAU LINK FOTO KAMU -->
+                <img src="Dikdik.png" alt="Dikdik Musfar" class="relative w-full h-full object-cover rounded-full border-4 border-white dark:border-slate-800 shadow-xl dark:shadow-[0_0_30px_rgba(6,182,212,0.3)] bg-slate-200 dark:bg-slate-800 transition-all duration-300">
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Skills -->
+    <section id="skills" class="py-20 px-4 border-y border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 transition-colors duration-300">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-10 text-center transition-colors duration-300">Core <span class="text-blue-600 dark:text-cyan-400">Competencies</span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Skill 1 -->
+                <div class="p-8 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-blue-400 dark:hover:border-cyan-500/50 hover:shadow-xl dark:hover:shadow-[0_0_20px_rgba(6,182,212,0.15)] transition duration-300">
+                    <div class="w-12 h-12 bg-blue-100 dark:bg-cyan-900/50 text-blue-600 dark:text-cyan-400 rounded-xl flex items-center justify-center mb-6 text-2xl font-bold border border-transparent dark:border-cyan-500/20 transition-colors duration-300">1</div>
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-4 transition-colors duration-300">Data Analytics</h3>
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed transition-colors duration-300">
+                        SQL &bull; Python &bull; Big Data Hadoop Impala Hue &bull; AWS Redshift &bull; DBT &bull; Data Modeling &bull; Large Datasets Analysis
+                    </p>
+                </div>
+                <!-- Skill 2 -->
+                <div class="p-8 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-indigo-400 dark:hover:border-blue-500/50 hover:shadow-xl dark:hover:shadow-[0_0_20px_rgba(59,130,246,0.15)] transition duration-300">
+                    <div class="w-12 h-12 bg-indigo-100 dark:bg-blue-900/50 text-indigo-600 dark:text-blue-400 rounded-xl flex items-center justify-center mb-6 text-2xl font-bold border border-transparent dark:border-blue-500/20 transition-colors duration-300">2</div>
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-4 transition-colors duration-300">Business Intelligence</h3>
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed transition-colors duration-300">
+                        PowerBI &bull; Tableau &bull; Looker &bull; Dashboard Building &bull; Data Visualization
+                    </p>
+                </div>
+                <!-- Skill 3 -->
+                <div class="p-8 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-emerald-400 dark:hover:border-emerald-500/50 hover:shadow-xl dark:hover:shadow-[0_0_20px_rgba(16,185,129,0.15)] transition duration-300">
+                    <div class="w-12 h-12 bg-emerald-100 dark:bg-emerald-900/50 text-emerald-600 dark:text-emerald-400 rounded-xl flex items-center justify-center mb-6 text-2xl font-bold border border-transparent dark:border-emerald-500/20 transition-colors duration-300">3</div>
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-4 transition-colors duration-300">Business Strategy</h3>
+                    <p class="text-slate-600 dark:text-slate-400 leading-relaxed transition-colors duration-300">
+                        Commercial Decisions &bull; Actionable Insights &bull; Business Problem Framing &bull; Ad hoc Analyses &bull; Success Metrics &bull; Stakeholder Management
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Experience -->
+    <section id="experience" class="py-20 px-4 bg-slate-50 dark:bg-slate-900 transition-colors duration-300">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-12 text-center transition-colors duration-300">Professional <span class="text-blue-600 dark:text-cyan-400">Experience</span></h2>
+            
+            <div class="space-y-12 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-300 dark:before:via-slate-700 before:to-transparent">
+                
+                <!-- Job 1 -->
+                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-white dark:border-slate-900 bg-blue-500 dark:bg-cyan-500 shadow-md dark:shadow-[0_0_10px_rgba(6,182,212,0.6)] shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 absolute left-0 md:left-1/2 -translate-x-1/2 transition-colors duration-300"></div>
+                    <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white dark:bg-slate-800 p-6 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm hover:border-blue-400 dark:hover:border-cyan-500/50 hover:shadow-lg dark:hover:shadow-[0_0_20px_rgba(6,182,212,0.1)] transition duration-300">
+                        <div class="text-blue-600 dark:text-cyan-400 font-bold mb-1 transition-colors duration-300">Kaldu Sari Nabati Indonesia</div>
+                        <h4 class="text-xl font-bold text-slate-900 dark:text-white transition-colors duration-300">Data Analyst</h4>
+                        <div class="text-sm text-slate-500 dark:text-slate-400 mb-4 font-medium transition-colors duration-300">Bandung | November 2025 to Present</div>
+                        <ul class="list-disc ml-4 text-slate-600 dark:text-slate-300 space-y-2 text-sm leading-relaxed marker:text-blue-500 dark:marker:text-cyan-500 transition-colors duration-300">
+                            <li>Spearheaded Unified Reporting Standardization by implementing the Nabati DNA System generating scalable JSON outputs that reduced development cycles by 30 percent and user feedback by 50 percent.</li>
+                            <li>Engineered an end to end Market Knowledge pipeline using AWS Redshift and DBT delivering data 1.5x faster than standard benchmarks.</li>
+                            <li>Completed comprehensive effectiveness analysis for the Full Self Order pilot guiding full scale rollout decisions across national outlets.</li>
+                            <li>Delivered business critical projects focusing on daily sales monitoring and manufacturing asset management to optimize resource allocation.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Job 2 -->
+                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-white dark:border-slate-900 bg-blue-400 dark:bg-cyan-600 shadow-md dark:shadow-[0_0_10px_rgba(6,182,212,0.4)] shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 absolute left-0 md:left-1/2 -translate-x-1/2 transition-colors duration-300"></div>
+                    <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white dark:bg-slate-800 p-6 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm hover:border-blue-400 dark:hover:border-cyan-500/50 hover:shadow-lg dark:hover:shadow-[0_0_20px_rgba(6,182,212,0.1)] transition duration-300">
+                        <div class="text-blue-600 dark:text-cyan-400 font-bold mb-1 transition-colors duration-300">Bank Syariah Indonesia</div>
+                        <h4 class="text-xl font-bold text-slate-900 dark:text-white transition-colors duration-300">Business Intelligence Analyst</h4>
+                        <div class="text-sm text-slate-500 dark:text-slate-400 mb-4 font-medium transition-colors duration-300">Jakarta | February 2024 to October 2025</div>
+                        <ul class="list-disc ml-4 text-slate-600 dark:text-slate-300 space-y-2 text-sm leading-relaxed marker:text-blue-400 dark:marker:text-cyan-500 transition-colors duration-300">
+                            <li>Delivered over 8 business critical dashboards enhancing performance monitoring across retail banking gold MSMEs and automotive financing.</li>
+                            <li>Leveraged Big Data ecosystem Hadoop Impala Hue to extract and process massive transaction datasets improving data driven actions.</li>
+                            <li>Revolutionized performance monitoring across 1000 branches by developing a centralized dashboard closing critical visibility gaps.</li>
+                            <li>Developed the first Gold Business Bullion Dashboard from scratch enabling data driven monitoring of priority executive projects.</li>
+                            <li>Led AI initiative content creation producing key video campaigns showcased to 18000 employees.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Job 3 -->
+                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-white dark:border-slate-900 bg-blue-300 dark:bg-cyan-700 shadow-md dark:shadow-[0_0_10px_rgba(6,182,212,0.2)] shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 absolute left-0 md:left-1/2 -translate-x-1/2 transition-colors duration-300"></div>
+                    <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white dark:bg-slate-800 p-6 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm hover:border-blue-400 dark:hover:border-cyan-500/50 hover:shadow-lg dark:hover:shadow-[0_0_20px_rgba(6,182,212,0.1)] transition duration-300">
+                        <div class="text-blue-600 dark:text-cyan-400 font-bold mb-1 transition-colors duration-300">Dinas Pendidikan Provinsi Jawa Barat</div>
+                        <h4 class="text-xl font-bold text-slate-900 dark:text-white transition-colors duration-300">Full Stack Developer</h4>
+                        <div class="text-sm text-slate-500 dark:text-slate-400 mb-4 font-medium transition-colors duration-300">Bandung | June 2022 to February 2024</div>
+                        <ul class="list-disc ml-4 text-slate-600 dark:text-slate-300 space-y-2 text-sm leading-relaxed marker:text-blue-300 dark:marker:text-cyan-500 transition-colors duration-300">
+                            <li>Developed Sigesit Juara a comprehensive province wide platform for 4500 schools to analyze datasets regarding teacher distribution.</li>
+                            <li>Formulated data assessment frameworks to evaluate and rank schools identifying high priority institutions for targeted government assistance.</li>
+                            <li>Engineered a Go based automation tool to extract and structure data removing manual input and improving accuracy.</li>
+                            <li>Awarded Top 2 by BP2D West Java for producing impactful video campaigns promoting student safety.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Projects Portfolio -->
+    <section id="projects" class="py-20 px-4 border-y border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 transition-colors duration-300">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-4 transition-colors duration-300">Strategic <span class="text-blue-600 dark:text-cyan-400">Projects</span></h2>
+                <p class="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto text-lg transition-colors duration-300">Delivering high impact dashboards and analytical systems that bridge the gap between raw data and business execution.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Project 1 -->
+                <div class="bg-slate-50 dark:bg-slate-800 rounded-2xl p-8 border border-slate-200 dark:border-slate-700 flex flex-col h-full transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl dark:hover:shadow-[0_15px_30px_rgba(6,182,212,0.25)] hover:border-blue-400 dark:hover:border-cyan-500/50 group">
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-cyan-400 transition-colors duration-300">Bullion Bank Analytics</h3>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm mb-4 flex-grow transition-colors duration-300">Initiated the development of a real time portfolio monitoring system to accelerate strategic expansion insights and unify previously separate gold based services.</p>
+                    <div class="mb-4">
+                        <div class="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-2 transition-colors duration-300">Impact</div>
+                        <p class="text-sm text-slate-700 dark:text-slate-300 font-medium italic transition-colors duration-300">"From data silos to golden strategies this dashboard turns raw numbers into real business opportunities"</p>
+                    </div>
+                    <div class="flex flex-wrap gap-2 mt-auto pt-4 border-t border-slate-200 dark:border-slate-700 transition-colors duration-300">
+                        <span class="text-xs bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-600 text-blue-700 dark:text-cyan-300 px-2 py-1 rounded transition-colors duration-300">Big Data</span>
+                        <span class="text-xs bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-600 text-blue-700 dark:text-cyan-300 px-2 py-1 rounded transition-colors duration-300">Power BI</span>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="bg-slate-50 dark:bg-slate-800 rounded-2xl p-8 border border-slate-200 dark:border-slate-700 flex flex-col h-full transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl dark:hover:shadow-[0_15px_30px_rgba(6,182,212,0.25)] hover:border-blue-400 dark:hover:border-cyan-500/50 group">
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-cyan-400 transition-colors duration-300">Branch Performance Hub</h3>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm mb-4 flex-grow transition-colors duration-300">Optimized data accessibility for branches by creating a centralized dashboard significantly improving server stability and empowering rapid data retrieval.</p>
+                    <div class="mb-4">
+                        <div class="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-2 transition-colors duration-300">Impact</div>
+                        <p class="text-sm text-slate-700 dark:text-slate-300 font-medium italic transition-colors duration-300">"Speed clarity and empowerment this dashboard brings all three to every branch across the region"</p>
+                    </div>
+                    <div class="flex flex-wrap gap-2 mt-auto pt-4 border-t border-slate-200 dark:border-slate-700 transition-colors duration-300">
+                        <span class="text-xs bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-600 text-blue-700 dark:text-cyan-300 px-2 py-1 rounded transition-colors duration-300">Hadoop</span>
+                        <span class="text-xs bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-600 text-blue-700 dark:text-cyan-300 px-2 py-1 rounded transition-colors duration-300">Power BI</span>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="bg-slate-50 dark:bg-slate-800 rounded-2xl p-8 border border-slate-200 dark:border-slate-700 flex flex-col h-full transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl dark:hover:shadow-[0_15px_30px_rgba(6,182,212,0.25)] hover:border-blue-400 dark:hover:border-cyan-500/50 group">
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-cyan-400 transition-colors duration-300">Empowering MSME Growth</h3>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm mb-4 flex-grow transition-colors duration-300">Advanced MSME analytics by replacing manual data collection with a standardized comprehensive dashboard to uncover new growth opportunities.</p>
+                    <div class="mb-4">
+                        <div class="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-2 transition-colors duration-300">Impact</div>
+                        <p class="text-sm text-slate-700 dark:text-slate-300 font-medium italic transition-colors duration-300">"With the right data we are not just serving MSMEs we are growing with them"</p>
+                    </div>
+                    <div class="flex flex-wrap gap-2 mt-auto pt-4 border-t border-slate-200 dark:border-slate-700 transition-colors duration-300">
+                        <span class="text-xs bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-600 text-blue-700 dark:text-cyan-300 px-2 py-1 rounded transition-colors duration-300">Impala</span>
+                        <span class="text-xs bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-600 text-blue-700 dark:text-cyan-300 px-2 py-1 rounded transition-colors duration-300">Data Strategy</span>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="bg-slate-50 dark:bg-slate-800 rounded-2xl p-8 border border-slate-200 dark:border-slate-700 flex flex-col h-full transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl dark:hover:shadow-[0_15px_30px_rgba(6,182,212,0.25)] hover:border-blue-400 dark:hover:border-cyan-500/50 group">
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-cyan-400 transition-colors duration-300">Smart Agent Tracking</h3>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm mb-4 flex-grow transition-colors duration-300">Developed performance tracking tools to clearly measure and highlight the valuable contributions of remote agents justifying future investments.</p>
+                    <div class="mb-4">
+                        <div class="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-2 transition-colors duration-300">Impact</div>
+                        <p class="text-sm text-slate-700 dark:text-slate-300 font-medium italic transition-colors duration-300">"With the SMART AGENT network we do not just reach people we empower them with access"</p>
+                    </div>
+                    <div class="flex flex-wrap gap-2 mt-auto pt-4 border-t border-slate-200 dark:border-slate-700 transition-colors duration-300">
+                        <span class="text-xs bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-600 text-blue-700 dark:text-cyan-300 px-2 py-1 rounded transition-colors duration-300">SQL</span>
+                        <span class="text-xs bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-600 text-blue-700 dark:text-cyan-300 px-2 py-1 rounded transition-colors duration-300">Power BI</span>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="bg-slate-50 dark:bg-slate-800 rounded-2xl p-8 border border-slate-200 dark:border-slate-700 flex flex-col h-full transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl dark:hover:shadow-[0_15px_30px_rgba(6,182,212,0.25)] hover:border-blue-400 dark:hover:border-cyan-500/50 group">
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-cyan-400 transition-colors duration-300">Automotive Insights</h3>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm mb-4 flex-grow transition-colors duration-300">Integrated third party and internal data sources to automate daily loan application reporting enabling faster business strategy responses.</p>
+                    <div class="mb-4">
+                        <div class="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-2 transition-colors duration-300">Impact</div>
+                        <p class="text-sm text-slate-700 dark:text-slate-300 font-medium italic transition-colors duration-300">"When data connects business grows This dashboard bridges the gap between insight and impact"</p>
+                    </div>
+                    <div class="flex flex-wrap gap-2 mt-auto pt-4 border-t border-slate-200 dark:border-slate-700 transition-colors duration-300">
+                        <span class="text-xs bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-600 text-blue-700 dark:text-cyan-300 px-2 py-1 rounded transition-colors duration-300">Data Integration</span>
+                        <span class="text-xs bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-600 text-blue-700 dark:text-cyan-300 px-2 py-1 rounded transition-colors duration-300">KPI Tracking</span>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="bg-slate-50 dark:bg-slate-800 rounded-2xl p-8 border border-slate-200 dark:border-slate-700 flex flex-col h-full transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl dark:hover:shadow-[0_15px_30px_rgba(6,182,212,0.25)] hover:border-blue-400 dark:hover:border-cyan-500/50 group">
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-cyan-400 transition-colors duration-300">Timely Payroll Assurance</h3>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm mb-4 flex-grow transition-colors duration-300">Enhanced transaction monitoring reliability by creating a real time dashboard to swiftly identify and resolve transfer anomalies ensuring customer trust.</p>
+                    <div class="mb-4">
+                        <div class="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-2 transition-colors duration-300">Impact</div>
+                        <p class="text-sm text-slate-700 dark:text-slate-300 font-medium italic transition-colors duration-300">"You cannot fix what you cannot see this dashboard makes failure visible so resolution becomes possible"</p>
+                    </div>
+                    <div class="flex flex-wrap gap-2 mt-auto pt-4 border-t border-slate-200 dark:border-slate-700 transition-colors duration-300">
+                        <span class="text-xs bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-600 text-blue-700 dark:text-cyan-300 px-2 py-1 rounded transition-colors duration-300">CTE SQL</span>
+                        <span class="text-xs bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-600 text-blue-700 dark:text-cyan-300 px-2 py-1 rounded transition-colors duration-300">Real Time Monitoring</span>
+                    </div>
+                </div>
+                
+                <!-- Project 7 -->
+                <div class="bg-slate-50 dark:bg-slate-800 rounded-2xl p-8 border border-slate-200 dark:border-slate-700 flex flex-col h-full transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl dark:hover:shadow-[0_15px_30px_rgba(6,182,212,0.25)] hover:border-blue-400 dark:hover:border-cyan-500/50 group">
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-cyan-400 transition-colors duration-300">Teacher Distribution Analytics</h3>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm mb-4 flex-grow transition-colors duration-300">Automated the teacher distribution process by building a centralized educational data system drastically improving human resource allocation efficiency.</p>
+                    <div class="mb-4">
+                        <div class="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-2 transition-colors duration-300">Impact</div>
+                        <p class="text-sm text-slate-700 dark:text-slate-300 font-medium italic transition-colors duration-300">"Bridging educational gaps through data driven empathy"</p>
+                    </div>
+                    <div class="flex flex-wrap gap-2 mt-auto pt-4 border-t border-slate-200 dark:border-slate-700 transition-colors duration-300">
+                        <span class="text-xs bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-600 text-blue-700 dark:text-cyan-300 px-2 py-1 rounded transition-colors duration-300">Laravel</span>
+                        <span class="text-xs bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-600 text-blue-700 dark:text-cyan-300 px-2 py-1 rounded transition-colors duration-300">Vue js</span>
+                        <span class="text-xs bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-600 text-blue-700 dark:text-cyan-300 px-2 py-1 rounded transition-colors duration-300">Python</span>
+                    </div>
+                </div>
+                
+                <!-- Project 8 -->
+                <div class="bg-slate-50 dark:bg-slate-800 rounded-2xl p-8 border border-slate-200 dark:border-slate-700 flex flex-col h-full transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl dark:hover:shadow-[0_15px_30px_rgba(6,182,212,0.25)] hover:border-blue-400 dark:hover:border-cyan-500/50 group">
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-cyan-400 transition-colors duration-300">Full Self Order Rollout</h3>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm mb-4 flex-grow transition-colors duration-300">Evaluated the business impact of a digitalized ordering system validating sales growth and securing data driven approval for national rollout.</p>
+                    <div class="mb-4">
+                        <div class="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-2 transition-colors duration-300">Impact</div>
+                        <p class="text-sm text-slate-700 dark:text-slate-300 font-medium italic transition-colors duration-300">"Digitalization speeds up service but data insight ensures efficiency stays focused on customer happiness"</p>
+                    </div>
+                    <div class="flex flex-wrap gap-2 mt-auto pt-4 border-t border-slate-200 dark:border-slate-700 transition-colors duration-300">
+                        <span class="text-xs bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-600 text-blue-700 dark:text-cyan-300 px-2 py-1 rounded transition-colors duration-300">Redshift</span>
+                        <span class="text-xs bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-600 text-blue-700 dark:text-cyan-300 px-2 py-1 rounded transition-colors duration-300">Azure DevOps</span>
+                    </div>
+                </div>
+                
+                <!-- Project 9 -->
+                <div class="bg-slate-50 dark:bg-slate-800 rounded-2xl p-8 border border-slate-200 dark:border-slate-700 flex flex-col h-full transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl dark:hover:shadow-[0_15px_30px_rgba(6,182,212,0.25)] hover:border-blue-400 dark:hover:border-cyan-500/50 group">
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-cyan-400 transition-colors duration-300">Executive Weekly Sales</h3>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm mb-4 flex-grow transition-colors duration-300">Modernized executive reporting by transitioning from manual spreadsheet emails to a real time interactive dashboard for single source of truth analytics.</p>
+                    <div class="mb-4">
+                        <div class="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-2 transition-colors duration-300">Impact</div>
+                        <p class="text-sm text-slate-700 dark:text-slate-300 font-medium italic transition-colors duration-300">"Stop waiting for emails one data one truth faster decisions in real time"</p>
+                    </div>
+                    <div class="flex flex-wrap gap-2 mt-auto pt-4 border-t border-slate-200 dark:border-slate-700 transition-colors duration-300">
+                        <span class="text-xs bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-600 text-blue-700 dark:text-cyan-300 px-2 py-1 rounded transition-colors duration-300">Dashboarding</span>
+                        <span class="text-xs bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-600 text-blue-700 dark:text-cyan-300 px-2 py-1 rounded transition-colors duration-300">Automation</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Volunteer -->
+    <section id="education" class="py-20 px-4 bg-slate-50 dark:bg-slate-900 transition-colors duration-300">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
+            
+            <!-- Education -->
+            <div>
+                <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-8 transition-colors duration-300">Education</h2>
+                <div class="bg-white dark:bg-slate-800 p-8 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm hover:border-blue-400 dark:hover:border-cyan-500/50 transition duration-300">
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white transition-colors duration-300">Politeknik Piksi Ganesha</h3>
+                    <div class="text-blue-600 dark:text-cyan-400 font-semibold mb-4 transition-colors duration-300">Class of 2018 to 2022</div>
+                    <ul class="space-y-3 text-slate-600 dark:text-slate-400 text-sm transition-colors duration-300">
+                        <li class="flex items-start">
+                            <span class="text-blue-500 dark:text-cyan-500 mr-2 transition-colors duration-300">&bull;</span>
+                            Graduated Top of Class Best Graduate in Informatics Cohort
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-500 dark:text-cyan-500 mr-2 transition-colors duration-300">&bull;</span>
+                            Bachelor of Applied Science in Information Management GPA 3.80
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-500 dark:text-cyan-500 mr-2 transition-colors duration-300">&bull;</span>
+                            Associate Degree in Computer Engineering GPA 3.58
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Volunteering -->
+            <div>
+                <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-8 transition-colors duration-300">Volunteering</h2>
+                <div class="bg-white dark:bg-slate-800 p-8 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm hover:border-blue-400 dark:hover:border-cyan-500/50 transition duration-300">
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white transition-colors duration-300">Karang Taruna Haur Galur</h3>
+                    <div class="text-blue-600 dark:text-cyan-400 font-semibold mb-4 transition-colors duration-300">Head of Communication and Information | July 2020 to March 2025</div>
+                    <ul class="space-y-3 text-slate-600 dark:text-slate-400 text-sm transition-colors duration-300">
+                        <li class="flex items-start">
+                            <span class="text-blue-500 dark:text-cyan-500 mr-2 transition-colors duration-300">&bull;</span>
+                            Developed an analytical system to evaluate social welfare data ensuring accurate assistance for over 18000 residents.
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-500 dark:text-cyan-500 mr-2 transition-colors duration-300">&bull;</span>
+                            Engineered an automated data collection workflow improving submission efficiency by 80 percent and enhancing overall data quality.
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-500 dark:text-cyan-500 mr-2 transition-colors duration-300">&bull;</span>
+                            Implemented continuous data monitoring for social aid distribution enabling community leaders to make informed decisions.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-100 dark:bg-slate-950 py-10 text-center border-t border-slate-200 dark:border-slate-800 transition-colors duration-300">
+        <p class="text-slate-500 dark:text-slate-500 text-sm">Designed and built for professional data analytics excellence</p>
+    </footer>
+
+    <!-- Theme Toggle Script -->
+    <script>
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const htmlElement = document.documentElement;
+
+        themeToggleBtn.addEventListener('click', () => {
+            htmlElement.classList.toggle('dark');
+            // Menyesuaikan icon tombol agar sesuai mode
+            const isDark = htmlElement.classList.contains('dark');
+            themeToggleBtn.innerHTML = isDark 
+                ? '<span class="text-lg">☀️</span> <span class="hidden sm:inline">Light Mode</span>' 
+                : '<span class="text-lg">🌙</span> <span class="hidden sm:inline">Dark Mode</span>';
+        });
+
+        // Setup awal icon saat pertama dimuat (default dark sesuai class="dark" di tag html)
+        if(htmlElement.classList.contains('dark')) {
+            themeToggleBtn.innerHTML = '<span class="text-lg">☀️</span> <span class="hidden sm:inline">Light Mode</span>';
+        } else {
+            themeToggleBtn.innerHTML = '<span class="text-lg">🌙</span> <span class="hidden sm:inline">Dark Mode</span>';
+        }
+    </script>
+</body>
+</html>
