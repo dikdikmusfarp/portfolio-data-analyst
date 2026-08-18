@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Projects | Dikdik Musfar</title>
+    <meta name="description" content="15 projects by Dikdik Musfar across Banking, FMCG, and the Public Sector — from gold banking analytics to LLM-powered QSR operations intelligence.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://dikdikmusfarp.github.io/portfolio-data-analyst/projects.html">
+    <meta property="og:title" content="All Projects | Dikdik Musfar">
+    <meta property="og:description" content="15 projects across Banking, FMCG, and the Public Sector. Each one built to solve a real business problem.">
+    <meta property="og:image" content="Dikdik.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-slate-50 dark:bg-slate-900 text-slate-800 dark:text-slate-300 antialiased selection:bg-blue-200 dark:selection:bg-cyan-500/30 selection:text-blue-900 dark:selection:text-cyan-200 transition-colors duration-300">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 transition-all duration-300">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-xl font-bold text-slate-900 dark:text-white tracking-tight">Dikdik <span class="text-blue-600 dark:text-cyan-400">Musfar</span></a>
+            <div class="flex items-center gap-3">
+                <!-- Desktop Nav -->
+                <div class="hidden md:flex space-x-6 lg:space-x-8 text-sm font-semibold text-slate-600 dark:text-slate-400">
+                    <a href="index.html#about" class="hover:text-blue-600 dark:hover:text-cyan-400 transition">About</a>
+                    <a href="index.html#skills" class="hover:text-blue-600 dark:hover:text-cyan-400 transition">Skills</a>
+                    <a href="index.html#experience" class="hover:text-blue-600 dark:hover:text-cyan-400 transition">Experience</a>
+                    <a href="projects.html" class="text-blue-600 dark:text-cyan-400 transition">All Projects</a>
+                    <a href="index.html#certifications" class="hover:text-blue-600 dark:hover:text-cyan-400 transition">Certifications</a>
+                    <a href="index.html#testimonials" class="hover:text-blue-600 dark:hover:text-cyan-400 transition">Testimonials</a>
+                    <a href="index.html#social-impact" class="hover:text-blue-600 dark:hover:text-cyan-400 transition">Social Impact</a>
+                </div>
+                <!-- Theme Toggle -->
+                <button id="theme-toggle" class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-sm font-medium hover:ring-2 hover:ring-blue-500 dark:hover:ring-cyan-400 transition">
+                    <span class="text-lg">🌓</span> <span class="hidden sm:inline">Theme</span>
+                </button>
+                <!-- Mobile Hamburger -->
+                <button id="mobile-menu-btn" class="md:hidden flex items-center justify-center w-9 h-9 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition">
+                    <svg id="hamburger-icon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                    <svg id="close-icon" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900">
+            <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col gap-1">
+                <a href="index.html#about" class="mobile-nav-link px-4 py-2.5 rounded-lg text-sm font-semibold text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-blue-600 dark:hover:text-cyan-400 transition">About</a>
+                <a href="index.html#projects" class="mobile-nav-link px-4 py-2.5 rounded-lg text-sm font-semibold text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-blue-600 dark:hover:text-cyan-400 transition">Featured Projects</a>
+                <a href="projects.html" class="mobile-nav-link px-4 py-2.5 rounded-lg text-sm font-semibold text-blue-600 dark:text-cyan-400 bg-blue-50 dark:bg-blue-900/20">All Projects</a>
+                <a href="index.html#skills" class="mobile-nav-link px-4 py-2.5 rounded-lg text-sm font-semibold text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-blue-600 dark:hover:text-cyan-400 transition">Skills</a>
+                <a href="index.html#experience" class="mobile-nav-link px-4 py-2.5 rounded-lg text-sm font-semibold text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-blue-600 dark:hover:text-cyan-400 transition">Experience</a>
+                <a href="index.html#certifications" class="mobile-nav-link px-4 py-2.5 rounded-lg text-sm font-semibold text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-blue-600 dark:hover:text-cyan-400 transition">Certifications</a>
+                <a href="index.html#testimonials" class="mobile-nav-link px-4 py-2.5 rounded-lg text-sm font-semibold text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-blue-600 dark:hover:text-cyan-400 transition">Testimonials</a>
+                <div class="border-t border-slate-200 dark:border-slate-800 mt-2 pt-3 flex gap-3">
+                    <a href="mailto:dikdikmusfar@gmail.com" class="flex-1 text-center px-4 py-2.5 bg-blue-600 dark:bg-cyan-500 text-white dark:text-slate-900 text-sm font-bold rounded-lg hover:bg-blue-700 dark:hover:bg-cyan-400 transition">Email Me</a>
+                    <a href="index.html" class="flex-1 text-center px-4 py-2.5 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-white text-sm font-semibold rounded-lg border border-slate-300 dark:border-slate-700 transition">Back to Home</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Page Header -->
+    <section class="pt-32 pb-12 px-4 bg-slate-50 dark:bg-slate-900">
+        <div class="max-w-6xl mx-auto">
+            <a href="index.html" class="inline-flex items-center gap-2 text-sm text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-cyan-400 transition mb-6">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                Back to Portfolio
+            </a>
+            <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 dark:text-white mb-4">All <span class="text-blue-600 dark:text-cyan-400">Projects</span></h1>
+            <p class="text-slate-600 dark:text-slate-400 text-lg max-w-2xl">15 projects across Banking, FMCG, and the Public Sector. Each one built to solve a real business problem.</p>
+        </div>
+    </section>
+
+    <!-- All Projects Grid -->
+    <section class="py-12 px-4 bg-white dark:bg-slate-900/50"><div class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Project 1: Bullion Bank Analytics -->
+                <div class="project-card opacity-0 translate-y-10 bg-slate-50 dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 flex flex-col h-full transition-all duration-700 ease-out hover:-translate-y-3 hover:shadow-2xl dark:hover:shadow-[0_15px_30px_rgba(6,182,212,0.25)] hover:border-blue-400 dark:hover:border-cyan-500/50 group overflow-hidden">
+                    <!-- Project Image -->
+                    <div class="h-48 bg-gradient-to-br from-amber-100 to-yellow-200 dark:from-slate-700 dark:to-slate-600 relative overflow-hidden">
+                        <img src="project-bullion.png" alt="Bullion Bank Analytics Dashboard" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                        <div class="absolute inset-0 hidden items-center justify-center flex-col gap-2 text-slate-400 dark:text-slate-500" style="display:flex">
+                            <svg class="w-10 h-10 opacity-30" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                            <span class="text-xs font-medium opacity-50">Add project-bullion.png</span>
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent"></div>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-cyan-400 transition-colors duration-300">Bullion Bank Analytics</h3>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm mb-4 flex-grow transition-colors duration-300">Indonesia's first gold banking analytics dashboard. Built in 2 months on direct request from top management, covering all gold products and customer segmentation to identify the best candidates.</p>
+                        <div class="mb-4">
+                            <div class="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-2 transition-colors duration-300">Key Takeaway</div>
+                            <p class="text-sm text-slate-700 dark:text-slate-300 font-medium italic transition-colors duration-300">"One page that answers every executive question about gold. No more digging through separate reports."</p>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mt-auto pt-4 border-t border-slate-200 dark:border-slate-700 transition-colors duration-300">
+                            <span class="text-xs bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-600 text-blue-700 dark:text-cyan-300 px-2 py-1 rounded transition-colors duration-300">Big Data</span>
+                            <span class="text-xs bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-600 text-blue-700 dark:text-cyan-300 px-2 py-1 rounded transition-colors duration-300">Power BI</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Branch Performance Hub -->
+                <div class="project-card opacity-0 translate-y-10 bg-slate-50 dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 flex flex-col h-full transition-all duration-700 ease-out hover:-translate-y-3 hover:shadow-2xl dark:hover:shadow-[0_15px_30px_rgba(6,182,212,0.25)] hover:border-blue-400 dark:hover:border-cyan-500/50 group overflow-hidden" style="transition-delay: 100ms;">
+                    <div class="h-48 bg-gradient-to-br from-slate-200 to-slate-300 dark:from-slate-700 dark:to-slate-600 relative overflow-hidden flex items-center justify-center">
+                        <img src="project-branch-hub.png" alt="Branch Performance Hub" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.classList.add('hidden')">
+                        <div class="absolute inset-0 flex flex-col items-center justify-center gap-2 text-slate-400 dark:text-slate-500 project-img-placeholder">
+                            <svg class="w-10 h-10 opacity-30" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                            <span class="text-xs font-medium opacity-50">project-branch-hub.png</span>
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent pointer-events-none"></div>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-cyan-400 transition-colors duration-300">Branch Performance Hub</h3>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm mb-4 flex-grow transition-colors duration-300">Previously, each branch pulled its own data and ran into server errors regularly. This dashboard centralizes everything in one stable place that anyone can access anytime.</p>
+                        <div class="mb-4">
+                            <div class="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-2 transition-colors duration-300">Key Takeaway</div>
+                            <p class="text-sm text-slate-700 dark:text-slate-300 font-medium italic transition-colors duration-300">"1,000 branches, one source of data. No waiting for emails, no asking around."</p>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mt-auto pt-4 border-t border-slate-200 dark:border-slate-700 transition-colors duration-300">
+                            <span class="text-xs bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-600 text-blue-700 dark:text-cyan-300 px-2 py-1 rounded transition-colors duration-300">Hadoop</span>
+                            <span class="text-xs bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-600 text-blue-700 dark:text-cyan-300 px-2 py-1 rounded transition-colors duration-300">Power BI</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Empowering MSME Growth -->
+                <div class="project-card opacity-0 translate-y-10 bg-slate-50 dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 flex flex-col h-full transition-all duration-700 ease-out hover:-translate-y-3 hover:shadow-2xl dark:hover:shadow-[0_15px_30px_rgba(6,182,212,0.25)] hover:border-blue-400 dark:hover:border-cyan-500/50 group overflow-hidden" style="transition-delay: 200ms;">
+                    <div class="h-48 bg-gradient-to-br from-slate-200 to-slate-300 dark:from-slate-700 dark:to-slate-600 relative overflow-hidden flex items-center justify-center">
+                        <img src="project-msme.png" alt="Empowering MSME Growth" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.classList.add('hidden')">
+                        <div class="absolute inset-0 flex flex-col items-center justify-center gap-2 text-slate-400 dark:text-slate-500 project-img-placeholder">
+                            <svg class="w-10 h-10 opacity-30" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                            <span class="text-xs font-medium opacity-50">project-msme.png</span>
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent pointer-events-none"></div>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-cyan-400 transition-colors duration-300">Empowering MSME Growth</h3>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm mb-4 flex-grow transition-colors duration-300">MSME data was being collected manually and was inconsistently structured. This dashboard replaced that process and helped the team surface growth opportunities that were previously invisible.</p>
+                        <div class="mb-4">
+                            <div class="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-2 transition-colors duration-300">Key Takeaway</div>
+                            <p class="text-sm text-slate-700 dark:text-slate-300 font-medium italic transition-colors duration-300">"Good data isn't just about accuracy. It's about who ends up being helped because of it."</p>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mt-auto pt-4 border-t border-slate-200 dark:border-slate-700 transition-colors duration-300">
+                            <span class="text-xs bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-600 text-blue-700 dark:text-cyan-300 px-2 py-1 rounded transition-colors duration-300">Impala</span>
+                            <span class="text-xs bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-600 text-blue-700 dark:text-cyan-300 px-2 py-1 rounded transition-colors duration-300">Data Strategy</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4: Smart Agent Tracking -->
+                <div class="project-card opacity-0 translate-y-10 bg-slate-50 dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 flex flex-col h-full transition-all duration-700 ease-out hover:-translate-y-3 hover:shadow-2xl dark:hover:shadow-[0_15px_30px_rgba(6,182,212,0.25)] hover:border-blue-400 dark:hover:border-cyan-500/50 group overflow-hidden">
+                    <div class="h-48 bg-gradient-to-br from-slate-200 to-slate-300 dark:from-slate-700 dark:to-slate-600 relative overflow-hidden flex items-center justify-center">
+                        <img src="project-smart-agent.png" alt="Smart Agent Tracking" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.classList.add('hidden')">
+                        <div class="absolute inset-0 flex flex-col items-center justify-center gap-2 text-slate-400 dark:text-slate-500 project-img-placeholder">
+                            <svg class="w-10 h-10 opacity-30" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                            <span class="text-xs font-medium opacity-50">project-smart-agent.png</span>
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent pointer-events-none"></div>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-cyan-400 transition-colors duration-300">Smart Agent Tracking</h3>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm mb-4 flex-grow transition-colors duration-300">Field agents are the frontline of the business but their contribution was hard to measure. This dashboard made performance visible and gave leadership the data needed to justify further investment.</p>
+                        <div class="mb-4">
+                            <div class="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-2 transition-colors duration-300">Key Takeaway</div>
+                            <p class="text-sm text-slate-700 dark:text-slate-300 font-medium italic transition-colors duration-300">"If the contribution isn't measured, it won't be valued the way it deserves."</p>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mt-auto pt-4 border-t border-slate-200 dark:border-slate-700 transition-colors duration-300">
+                            <span class="text-xs bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-600 text-blue-700 dark:text-cyan-300 px-2 py-1 rounded transition-colors duration-300">SQL</span>
+                            <span class="text-xs bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-600 text-blue-700 dark:text-cyan-300 px-2 py-1 rounded transition-colors duration-300">Power BI</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5: Automotive Insights -->
+                <div class="project-card opacity-0 translate-y-10 bg-slate-50 dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 flex flex-col h-full transition-all duration-700 ease-out hover:-translate-y-3 hover:shadow-2xl dark:hover:shadow-[0_15px_30px_rgba(6,182,212,0.25)] hover:border-blue-400 dark:hover:border-cyan-500/50 group overflow-hidden" style="transition-delay: 100ms;">
+                    <div class="h-48 bg-gradient-to-br from-slate-200 to-slate-300 dark:from-slate-700 dark:to-slate-600 relative overflow-hidden flex items-center justify-center">
+                        <img src="project-automotive.png" alt="Automotive Insights" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.classList.add('hidden')">
+                        <div class="absolute inset-0 flex flex-col items-center justify-center gap-2 text-slate-400 dark:text-slate-500 project-img-placeholder">
+                            <svg class="w-10 h-10 opacity-30" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                            <span class="text-xs font-medium opacity-50">project-automotive.png</span>
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent pointer-events-none"></div>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-cyan-400 transition-colors duration-300">Automotive Insights</h3>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm mb-4 flex-grow transition-colors duration-300">Integrated third-party and internal data to automate daily loan application reporting. The team no longer waits for manual recaps before making strategy calls.</p>
+                        <div class="mb-4">
+                            <div class="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-2 transition-colors duration-300">Key Takeaway</div>
+                            <p class="text-sm text-slate-700 dark:text-slate-300 font-medium italic transition-colors duration-300">"When internal and external data connect, the team can move faster than the competition."</p>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mt-auto pt-4 border-t border-slate-200 dark:border-slate-700 transition-colors duration-300">
+                            <span class="text-xs bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-600 text-blue-700 dark:text-cyan-300 px-2 py-1 rounded transition-colors duration-300">Data Integration</span>
+                            <span class="text-xs bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-600 text-blue-700 dark:text-cyan-300 px-2 py-1 rounded transition-colors duration-300">KPI Tracking</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6: Timely Payroll Assurance -->
+                <div class="project-card opacity-0 translate-y-10 bg-slate-50 dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 flex flex-col h-full transition-all duration-700 ease-out hover:-translate-y-3 hover:shadow-2xl dark:hover:shadow-[0_15px_30px_rgba(6,182,212,0.25)] hover:border-blue-400 dark:hover:border-cyan-500/50 group overflow-hidden" style="transition-delay: 200ms;">
+                    <div class="h-48 bg-gradient-to-br from-slate-200 to-slate-300 dark:from-slate-700 dark:to-slate-600 relative overflow-hidden flex items-center justify-center">
+                        <img src="project-payroll.png" alt="Timely Payroll Assurance" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.classList.add('hidden')">
+                        <div class="absolute inset-0 flex flex-col items-center justify-center gap-2 text-slate-400 dark:text-slate-500 project-img-placeholder">
+                            <svg class="w-10 h-10 opacity-30" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                            <span class="text-xs font-medium opacity-50">project-payroll.png</span>
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent pointer-events-none"></div>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-cyan-400 transition-colors duration-300">Timely Payroll Assurance</h3>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm mb-4 flex-grow transition-colors duration-300">Payroll transfer delays directly erode customer trust. This dashboard helps the team spot and resolve transaction anomalies before they turn into complaints.</p>
+                        <div class="mb-4">
+                            <div class="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-2 transition-colors duration-300">Key Takeaway</div>
+                            <p class="text-sm text-slate-700 dark:text-slate-300 font-medium italic transition-colors duration-300">"A problem you can't see is a problem you can't fix. This dashboard makes the invisible visible."</p>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mt-auto pt-4 border-t border-slate-200 dark:border-slate-700 transition-colors duration-300">
+                            <span class="text-xs bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-600 text-blue-700 dark:text-cyan-300 px-2 py-1 rounded transition-colors duration-300">CTE SQL</span>
+                            <span class="text-xs bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-600 text-blue-700 dark:text-cyan-300 px-2 py-1 rounded transition-colors duration-300">Real Time Monitoring</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 7: Teacher Distribution Analytics -->
+                <div class="project-card opacity-0 translate-y-10 bg-slate-50 dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 flex flex-col h-full transition-all duration-700 ease-out hover:-translate-y-3 hover:shadow-2xl dark:hover:shadow-[0_15px_30px_rgba(6,182,212,0.25)] hover:border-blue-400 dark:hover:border-cyan-500/50 group overflow-hidden">
+                    <div class="h-48 bg-gradient-to-br from-slate-200 to-slate-300 dark:from-slate-700 dark:to-slate-600 relative overflow-hidden flex items-center justify-center">
+                        <img src="project-teacher.png" alt="Teacher Distribution Analytics" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.classList.add('hidden')">
+                        <div class="absolute inset-0 flex flex-col items-center justify-center gap-2 text-slate-400 dark:text-slate-500 project-img-placeholder">
+                            <svg class="w-10 h-10 opacity-30" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                            <span class="text-xs font-medium opacity-50">project-teacher.png</span>
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent pointer-events-none"></div>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-cyan-400 transition-colors duration-300">Teacher Distribution Analytics</h3>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm mb-4 flex-grow transition-colors duration-300">Teacher distribution across West Java was done manually and was prone to bias. This platform automated the process and gave the government a clear, data-backed basis for fair resource allocation.</p>
+                        <div class="mb-4">
+                            <div class="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-2 transition-colors duration-300">Key Takeaway</div>
+                            <p class="text-sm text-slate-700 dark:text-slate-300 font-medium italic transition-colors duration-300">"Data can be a tool for fairness, as long as the intent behind it is right."</p>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mt-auto pt-4 border-t border-slate-200 dark:border-slate-700 transition-colors duration-300">
+                            <span class="text-xs bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-600 text-blue-700 dark:text-cyan-300 px-2 py-1 rounded transition-colors duration-300">Laravel</span>
+                            <span class="text-xs bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-600 text-blue-700 dark:text-cyan-300 px-2 py-1 rounded transition-colors duration-300">Vue js</span>
+                            <span class="text-xs bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-600 text-blue-700 dark:text-cyan-300 px-2 py-1 rounded transition-colors duration-300">Python</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 8: Full Self Order Rollout -->
+                <div class="project-card opacity-0 translate-y-10 bg-slate-50 dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 flex flex-col h-full transition-all duration-700 ease-out hover:-translate-y-3 hover:shadow-2xl dark:hover:shadow-[0_15px_30px_rgba(6,182,212,0.25)] hover:border-blue-400 dark:hover:border-cyan-500/50 group overflow-hidden" style="transition-delay: 100ms;">
+                    <div class="h-48 bg-gradient-to-br from-slate-200 to-slate-300 dark:from-slate-700 dark:to-slate-600 relative overflow-hidden flex items-center justify-center">
+                        <img src="project-fso.png" alt="Full Self Order Rollout" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.classList.add('hidden')">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent pointer-events-none"></div>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-cyan-400 transition-colors duration-300">Full Self Order Rollout</h3>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm mb-4 flex-grow transition-colors duration-300">Quantitative impact analysis on a digitalized ordering pilot. Found 3% to 13% sales uplift across outlets. The analysis directly drove the decision to roll out nationally.</p>
+                        <div class="mb-4">
+                            <div class="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-2 transition-colors duration-300">Key Takeaway</div>
+                            <p class="text-sm text-slate-700 dark:text-slate-300 font-medium italic transition-colors duration-300">"Digitalization is a method, not a goal. The data is what proves whether it's actually working."</p>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mt-auto pt-4 border-t border-slate-200 dark:border-slate-700 transition-colors duration-300">
+                            <span class="text-xs bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-600 text-blue-700 dark:text-cyan-300 px-2 py-1 rounded transition-colors duration-300">Redshift</span>
+                            <span class="text-xs bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-600 text-blue-700 dark:text-cyan-300 px-2 py-1 rounded transition-colors duration-300">Azure DevOps</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 9: Daily Sales Performance -->
+                <div class="project-card opacity-0 translate-y-10 bg-slate-50 dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 flex flex-col h-full transition-all duration-700 ease-out hover:-translate-y-3 hover:shadow-2xl dark:hover:shadow-[0_15px_30px_rgba(6,182,212,0.25)] hover:border-blue-400 dark:hover:border-cyan-500/50 group overflow-hidden" style="transition-delay: 200ms;">
+                    <div class="h-48 bg-gradient-to-br from-slate-200 to-slate-300 dark:from-slate-700 dark:to-slate-600 relative overflow-hidden flex items-center justify-center">
+                        <img src="project-daily-sales.png" alt="Daily Sales Performance" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.classList.add('hidden')">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent pointer-events-none"></div>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-cyan-400 transition-colors duration-300">Daily Sales Performance</h3>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm mb-4 flex-grow transition-colors duration-300">Replaced manual spreadsheet recaps with an interactive dashboard that serves as the single source of truth for daily sales across all management levels.</p>
+                        <div class="mb-4">
+                            <div class="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-2 transition-colors duration-300">Key Takeaway</div>
+                            <p class="text-sm text-slate-700 dark:text-slate-300 font-medium italic transition-colors duration-300">"No more waiting for recap emails. The data is already there, just open it."</p>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mt-auto pt-4 border-t border-slate-200 dark:border-slate-700 transition-colors duration-300">
+                            <span class="text-xs bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-600 text-blue-700 dark:text-cyan-300 px-2 py-1 rounded transition-colors duration-300">Redshift</span>
+                            <span class="text-xs bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-600 text-blue-700 dark:text-cyan-300 px-2 py-1 rounded transition-colors duration-300">Power BI</span>
+                            <span class="text-xs bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-600 text-blue-700 dark:text-cyan-300 px-2 py-1 rounded transition-colors duration-300">Azure DevOps</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 10: Weekly Sales Performance Pulse -->
+                <div class="project-card opacity-0 translate-y-10 bg-slate-50 dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 flex flex-col h-full transition-all duration-700 ease-out hover:-translate-y-3 hover:shadow-2xl dark:hover:shadow-[0_15px_30px_rgba(6,182,212,0.25)] hover:border-blue-400 dark:hover:border-cyan-500/50 group overflow-hidden">
+                    <div class="h-48 bg-gradient-to-br from-slate-200 to-slate-300 dark:from-slate-700 dark:to-slate-600 relative overflow-hidden flex items-center justify-center">
+                        <img src="project-weekly-pulse.png" alt="Weekly Sales Performance Pulse" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.classList.add('hidden')">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent pointer-events-none"></div>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-cyan-400 transition-colors duration-300">Weekly Sales Performance Pulse</h3>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm mb-4 flex-grow transition-colors duration-300">Near real-time weekly dashboard with early warnings per outlet segment. Leadership gets actionable signals before small issues become large problems.</p>
+                        <div class="mb-4">
+                            <div class="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-2 transition-colors duration-300">Key Takeaway</div>
+                            <p class="text-sm text-slate-700 dark:text-slate-300 font-medium italic transition-colors duration-300">"A full week of data, compressed into one page that you can act on immediately."</p>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mt-auto pt-4 border-t border-slate-200 dark:border-slate-700 transition-colors duration-300">
+                            <span class="text-xs bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-600 text-blue-700 dark:text-cyan-300 px-2 py-1 rounded transition-colors duration-300">Redshift</span>
+                            <span class="text-xs bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-600 text-blue-700 dark:text-cyan-300 px-2 py-1 rounded transition-colors duration-300">Power BI</span>
+                            <span class="text-xs bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-600 text-blue-700 dark:text-cyan-300 px-2 py-1 rounded transition-colors duration-300">Azure DevOps</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 11: The Nabati ProductDNA Design System -->
+                <div class="project-card opacity-0 translate-y-10 bg-slate-50 dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 flex flex-col h-full transition-all duration-700 ease-out hover:-translate-y-3 hover:shadow-2xl dark:hover:shadow-[0_15px_30px_rgba(6,182,212,0.25)] hover:border-blue-400 dark:hover:border-cyan-500/50 group overflow-hidden" style="transition-delay: 100ms;">
+                    <!-- Project Image -->
+                    <div class="bg-gradient-to-br from-blue-100 to-indigo-200 dark:from-slate-700 dark:to-slate-600 relative flex items-center justify-center p-4">
+                        <img src="dna-system.png" alt="Nabati DNA Design System" class="w-full h-auto object-contain group-hover:scale-105 transition duration-500 rounded-md shadow-sm" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent"></div>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-cyan-400 transition-colors duration-300">The Nabati ProductDNA Design System</h3>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm mb-4 flex-grow transition-colors duration-300">Nabati's first BI visual standard. Every template, theme, and formatting rule follows Nabati's product identity, so new developers are immediately familiar and user revision requests dropped significantly.</p>
+                        <div class="mb-4">
+                            <div class="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-2 transition-colors duration-300">Key Takeaway</div>
+                            <p class="text-sm text-slate-700 dark:text-slate-300 font-medium italic transition-colors duration-300">"Small, consistent improvements leave a legacy that outlasts any single project."</p>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mt-auto pt-4 border-t border-slate-200 dark:border-slate-700 transition-colors duration-300">
+                            <span class="text-xs bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-600 text-blue-700 dark:text-cyan-300 px-2 py-1 rounded transition-colors duration-300">Power BI</span>
+                            <span class="text-xs bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-600 text-blue-700 dark:text-cyan-300 px-2 py-1 rounded transition-colors duration-300">Design System</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 12: Market Innovation Intelligence -->
+                <div class="project-card opacity-0 translate-y-10 bg-slate-50 dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 flex flex-col h-full transition-all duration-700 ease-out hover:-translate-y-3 hover:shadow-2xl dark:hover:shadow-[0_15px_30px_rgba(6,182,212,0.25)] hover:border-blue-400 dark:hover:border-cyan-500/50 group overflow-hidden" style="transition-delay: 200ms;">
+                    <div class="h-48 bg-gradient-to-br from-slate-200 to-slate-300 dark:from-slate-700 dark:to-slate-600 relative overflow-hidden flex items-center justify-center">
+                        <img src="project-market-intel.png" alt="Market Innovation Intelligence" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.classList.add('hidden')">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent pointer-events-none"></div>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-cyan-400 transition-colors duration-300">Market Innovation Intelligence</h3>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm mb-4 flex-grow transition-colors duration-300">Restructured market data modeling using CTEs and star schema. More resilient to data changes and 80% more efficient to maintain than the previous approach.</p>
+                        <div class="mb-4">
+                            <div class="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-2 transition-colors duration-300">Key Takeaway</div>
+                            <p class="text-sm text-slate-700 dark:text-slate-300 font-medium italic transition-colors duration-300">"The strongest architecture isn't the most complex one. It's the one most ready for change."</p>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mt-auto pt-4 border-t border-slate-200 dark:border-slate-700 transition-colors duration-300">
+                            <span class="text-xs bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-600 text-blue-700 dark:text-cyan-300 px-2 py-1 rounded transition-colors duration-300">Redshift</span>
+                            <span class="text-xs bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-600 text-blue-700 dark:text-cyan-300 px-2 py-1 rounded transition-colors duration-300">Airflow</span>
+                            <span class="text-xs bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-600 text-blue-700 dark:text-cyan-300 px-2 py-1 rounded transition-colors duration-300">dbt</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 13: RKI KPI Ops -->
+                <div class="project-card opacity-0 translate-y-10 bg-slate-50 dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 flex flex-col h-full transition-all duration-700 ease-out hover:-translate-y-3 hover:shadow-2xl dark:hover:shadow-[0_15px_30px_rgba(16,185,129,0.25)] hover:border-emerald-400 dark:hover:border-emerald-500/50 group overflow-hidden">
+                    <div class="h-48 bg-gradient-to-br from-emerald-100 to-teal-200 dark:from-slate-700 dark:to-slate-600 relative overflow-hidden flex items-center justify-center">
+                        <img src="project-rki-kpi-ops.png" alt="RKI KPI Ops" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.classList.add('hidden')">
+                        <div class="absolute top-3 left-3">
+                            <span class="px-2 py-0.5 bg-emerald-600/90 text-white text-xs font-bold rounded-full">🤖 LLM-Powered</span>
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent pointer-events-none"></div>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors duration-300">RKI KPI Ops</h3>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm mb-4 flex-grow transition-colors duration-300">A unified QSR operations platform combining three prior projects. Integrates LLM-generated insights, auto-converts to PDF, and delivers to every management level every morning.</p>
+                        <div class="mb-4">
+                            <div class="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-2 transition-colors duration-300">Key Takeaway</div>
+                            <p class="text-sm text-slate-700 dark:text-slate-300 font-medium italic transition-colors duration-300">"Every morning, every manager already knows what happened yesterday and what to do today."</p>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mt-auto pt-4 border-t border-slate-200 dark:border-slate-700 transition-colors duration-300">
+                            <span class="text-xs bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-600 text-blue-700 dark:text-cyan-300 px-2 py-1 rounded transition-colors duration-300">Redshift</span>
+                            <span class="text-xs bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-600 text-blue-700 dark:text-cyan-300 px-2 py-1 rounded transition-colors duration-300">LLM</span>
+                            <span class="text-xs bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-600 text-blue-700 dark:text-cyan-300 px-2 py-1 rounded transition-colors duration-300">PDF Automation</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 14: Sentinel P&L -->
+                <div class="project-card opacity-0 translate-y-10 bg-slate-50 dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 flex flex-col h-full transition-all duration-700 ease-out hover:-translate-y-3 hover:shadow-2xl dark:hover:shadow-[0_15px_30px_rgba(244,63,94,0.2)] hover:border-rose-400 dark:hover:border-rose-500/50 group overflow-hidden" style="transition-delay: 100ms;">
+                    <div class="h-48 bg-gradient-to-br from-rose-100 to-red-200 dark:from-slate-700 dark:to-slate-600 relative overflow-hidden flex items-center justify-center">
+                        <img src="project-sentinel.png" alt="Sentinel P&L" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.classList.add('hidden')">
+                        <div class="absolute top-3 left-3">
+                            <span class="px-2 py-0.5 bg-rose-600/90 text-white text-xs font-bold rounded-full">🛡️ Cross-Team Collab</span>
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent pointer-events-none"></div>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-rose-600 dark:group-hover:text-rose-400 transition-colors duration-300">Sentinel — Profit &amp; Loss</h3>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm mb-4 flex-grow transition-colors duration-300">Real-time P&amp;L cost anomaly detection with LLM-generated action recommendations. Built with the Finance team so the report fits how they actually work.</p>
+                        <div class="mb-4">
+                            <div class="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-2 transition-colors duration-300">Key Takeaway</div>
+                            <p class="text-sm text-slate-700 dark:text-slate-300 font-medium italic transition-colors duration-300">"Catching a cost anomaly early is the difference between a correction and a crisis."</p>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mt-auto pt-4 border-t border-slate-200 dark:border-slate-700 transition-colors duration-300">
+                            <span class="text-xs bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-600 text-blue-700 dark:text-cyan-300 px-2 py-1 rounded transition-colors duration-300">Redshift</span>
+                            <span class="text-xs bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-600 text-blue-700 dark:text-cyan-300 px-2 py-1 rounded transition-colors duration-300">LLM</span>
+                            <span class="text-xs bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-600 text-blue-700 dark:text-cyan-300 px-2 py-1 rounded transition-colors duration-300">Anomaly Detection</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 15: Purchase Price Variance (PPV) -->
+                <div class="project-card opacity-0 translate-y-10 bg-slate-50 dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 flex flex-col h-full transition-all duration-700 ease-out hover:-translate-y-3 hover:shadow-2xl dark:hover:shadow-[0_15px_30px_rgba(139,92,246,0.2)] hover:border-violet-400 dark:hover:border-violet-500/50 group overflow-hidden" style="transition-delay: 200ms;">
+                    <div class="h-48 bg-gradient-to-br from-violet-100 to-purple-200 dark:from-slate-700 dark:to-slate-600 relative overflow-hidden flex items-center justify-center">
+                        <img src="project-ppv.png" alt="Purchase Price Variance" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.classList.add('hidden')">
+                        <div class="absolute top-3 left-3">
+                            <span class="px-2 py-0.5 bg-violet-600/90 text-white text-xs font-bold rounded-full">📦 Procurement Intelligence</span>
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent pointer-events-none"></div>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-violet-600 dark:group-hover:text-violet-400 transition-colors duration-300">Purchase Price Variance (PPV)</h3>
+                        <p class="text-slate-600 dark:text-slate-400 text-sm mb-4 flex-grow transition-colors duration-300">Raw material price shifts used to be spotted too late to act on. This dashboard tracks variance across all materials, flags significant movements with early warnings, and projects cost impact forward so procurement and finance stay aligned with monthly budget planning.</p>
+                        <div class="mb-4">
+                            <div class="text-xs font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-2 transition-colors duration-300">Key Takeaway</div>
+                            <p class="text-sm text-slate-700 dark:text-slate-300 font-medium italic transition-colors duration-300">"Knowing a price moved is useful. Knowing before it hits your budget is what actually matters."</p>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mt-auto pt-4 border-t border-slate-200 dark:border-slate-700 transition-colors duration-300">
+                            <span class="text-xs bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-600 text-blue-700 dark:text-cyan-300 px-2 py-1 rounded transition-colors duration-300">Redshift</span>
+                            <span class="text-xs bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-600 text-blue-700 dark:text-cyan-300 px-2 py-1 rounded transition-colors duration-300">Power BI</span>
+                            <span class="text-xs bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-600 text-blue-700 dark:text-cyan-300 px-2 py-1 rounded transition-colors duration-300">Anomaly Detection</span>
+                            <span class="text-xs bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-600 text-blue-700 dark:text-cyan-300 px-2 py-1 rounded transition-colors duration-300">Forecasting</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div></section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-100 dark:bg-slate-950 py-10 text-center border-t border-slate-200 dark:border-slate-800 transition-colors duration-300">
+        <div class="max-w-6xl mx-auto px-4 flex flex-col items-center gap-4">
+            <div class="flex flex-wrap justify-center gap-6 text-sm text-slate-500 dark:text-slate-500">
+                <a href="mailto:dikdikmusfar@gmail.com" class="hover:text-blue-600 dark:hover:text-cyan-400 transition">dikdikmusfar@gmail.com</a>
+                <span class="hidden sm:inline">·</span>
+                <a href="https://www.linkedin.com/in/dikdikmusfar/" target="_blank" class="hover:text-blue-600 dark:hover:text-cyan-400 transition">linkedin.com/in/dikdikmusfar</a>
+                <span class="hidden sm:inline">·</span>
+                <span>Bandung, Indonesia</span>
+            </div>
+            <p class="text-slate-400 dark:text-slate-600 text-xs">© 2026 Dikdik Musfar. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Theme (Dark/Light)
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const htmlElement = document.documentElement;
+
+        themeToggleBtn.addEventListener('click', () => {
+            htmlElement.classList.toggle('dark');
+            const isDark = htmlElement.classList.contains('dark');
+            themeToggleBtn.innerHTML = isDark
+                ? '<span class="text-lg">☀️</span> <span class="hidden sm:inline">Light Mode</span>'
+                : '<span class="text-lg">🌙</span> <span class="hidden sm:inline">Dark Mode</span>';
+        });
+
+        if (htmlElement.classList.contains('dark')) {
+            themeToggleBtn.innerHTML = '<span class="text-lg">☀️</span> <span class="hidden sm:inline">Light Mode</span>';
+        } else {
+            themeToggleBtn.innerHTML = '<span class="text-lg">🌙</span> <span class="hidden sm:inline">Dark Mode</span>';
+        }
+
+        // Mobile Menu
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const hamburgerIcon = document.getElementById('hamburger-icon');
+        const closeIcon = document.getElementById('close-icon');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            const isOpen = !mobileMenu.classList.contains('hidden');
+            mobileMenu.classList.toggle('hidden', isOpen);
+            hamburgerIcon.classList.toggle('hidden', !isOpen);
+            closeIcon.classList.toggle('hidden', isOpen);
+        });
+
+        document.querySelectorAll('.mobile-nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                hamburgerIcon.classList.remove('hidden');
+                closeIcon.classList.add('hidden');
+            });
+        });
+
+        // Intersection Observer for project card scroll animations
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.15
+            };
+
+            const projectObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.remove('opacity-0', 'translate-y-10');
+                        entry.target.classList.add('opacity-100', 'translate-y-0');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            const projectCards = document.querySelectorAll('.project-card');
+            projectCards.forEach(card => {
+                projectObserver.observe(card);
+            });
+        });
+    </script>
+</body>
+</html>
