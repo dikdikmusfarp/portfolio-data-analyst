@@ -41,15 +41,36 @@
             
             <div class="flex items-center gap-3">
                 <!-- Desktop Nav -->
-                <div class="hidden md:flex space-x-6 lg:space-x-8 text-sm font-semibold text-slate-600 dark:text-slate-400">
-                    <a href="#about" class="hover:text-blue-600 dark:hover:text-cyan-400 transition">About</a>
-                    <a href="#projects" class="hover:text-blue-600 dark:hover:text-cyan-400 transition">Projects</a>
-                    <a href="projects.html" class="hover:text-blue-600 dark:hover:text-cyan-400 transition">All Projects</a>
-                    <a href="#skills" class="hover:text-blue-600 dark:hover:text-cyan-400 transition">Skills</a>
-                    <a href="#experience" class="hover:text-blue-600 dark:hover:text-cyan-400 transition">Experience</a>
-                    <a href="#certifications" class="hover:text-blue-600 dark:hover:text-cyan-400 transition">Certifications</a>
-                    <a href="#testimonials" class="hover:text-blue-600 dark:hover:text-cyan-400 transition">Testimonials</a>
-                    <a href="#social-impact" class="hover:text-blue-600 dark:hover:text-cyan-400 transition">Social Impact</a>
+                <div class="hidden md:flex items-center space-x-1 lg:space-x-2 text-sm font-semibold text-slate-600 dark:text-slate-400">
+                    <a href="#about" class="px-3 py-1.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-blue-600 dark:hover:text-cyan-400 transition">About</a>
+
+                    <!-- Projects Dropdown -->
+                    <div class="relative" id="nav-projects-wrapper">
+                        <button id="nav-projects-btn" class="flex items-center gap-1 px-3 py-1.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-blue-600 dark:hover:text-cyan-400 transition">
+                            Projects
+                            <svg class="w-3.5 h-3.5 mt-0.5 transition-transform duration-200" id="nav-projects-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div id="nav-projects-menu" class="hidden absolute top-full left-0 mt-2 w-44 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl shadow-lg dark:shadow-[0_8px_24px_rgba(0,0,0,0.4)] overflow-hidden z-50">
+                            <a href="#projects" class="nav-dropdown-link block px-4 py-2.5 text-sm text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700 hover:text-blue-600 dark:hover:text-cyan-400 transition">Featured Projects</a>
+                            <a href="projects.html" class="nav-dropdown-link block px-4 py-2.5 text-sm text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700 hover:text-blue-600 dark:hover:text-cyan-400 transition border-t border-slate-100 dark:border-slate-700">All Projects</a>
+                        </div>
+                    </div>
+
+                    <a href="#skills" class="px-3 py-1.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-blue-600 dark:hover:text-cyan-400 transition">Skills</a>
+                    <a href="#experience" class="px-3 py-1.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-blue-600 dark:hover:text-cyan-400 transition">Experience</a>
+
+                    <!-- More Dropdown -->
+                    <div class="relative" id="nav-more-wrapper">
+                        <button id="nav-more-btn" class="flex items-center gap-1 px-3 py-1.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-blue-600 dark:hover:text-cyan-400 transition">
+                            More
+                            <svg class="w-3.5 h-3.5 mt-0.5 transition-transform duration-200" id="nav-more-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div id="nav-more-menu" class="hidden absolute top-full right-0 mt-2 w-44 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl shadow-lg dark:shadow-[0_8px_24px_rgba(0,0,0,0.4)] overflow-hidden z-50">
+                            <a href="#certifications" class="nav-dropdown-link block px-4 py-2.5 text-sm text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700 hover:text-blue-600 dark:hover:text-cyan-400 transition">Certifications</a>
+                            <a href="#testimonials" class="nav-dropdown-link block px-4 py-2.5 text-sm text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700 hover:text-blue-600 dark:hover:text-cyan-400 transition border-t border-slate-100 dark:border-slate-700">Testimonials</a>
+                            <a href="#social-impact" class="nav-dropdown-link block px-4 py-2.5 text-sm text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700 hover:text-blue-600 dark:hover:text-cyan-400 transition border-t border-slate-100 dark:border-slate-700">Social Impact</a>
+                        </div>
+                    </div>
                 </div>
                 
                 <!-- Theme Toggle -->
@@ -73,6 +94,7 @@
                 <a href="projects.html" class="mobile-nav-link px-4 py-2.5 rounded-lg text-sm font-semibold text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-blue-600 dark:hover:text-cyan-400 transition">All Projects</a>
                 <a href="#skills" class="mobile-nav-link px-4 py-2.5 rounded-lg text-sm font-semibold text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-blue-600 dark:hover:text-cyan-400 transition">Skills</a>
                 <a href="#experience" class="mobile-nav-link px-4 py-2.5 rounded-lg text-sm font-semibold text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-blue-600 dark:hover:text-cyan-400 transition">Experience</a>
+                <div class="border-t border-slate-100 dark:border-slate-800 my-1"></div>
                 <a href="#certifications" class="mobile-nav-link px-4 py-2.5 rounded-lg text-sm font-semibold text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-blue-600 dark:hover:text-cyan-400 transition">Certifications</a>
                 <a href="#testimonials" class="mobile-nav-link px-4 py-2.5 rounded-lg text-sm font-semibold text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-blue-600 dark:hover:text-cyan-400 transition">Testimonials</a>
                 <a href="#social-impact" class="mobile-nav-link px-4 py-2.5 rounded-lg text-sm font-semibold text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-blue-600 dark:hover:text-cyan-400 transition">Social Impact</a>
@@ -215,7 +237,7 @@
                             <div>
                                 <div class="mb-3">
                                     <p class="text-xs font-bold text-blue-600 dark:text-cyan-400 uppercase tracking-widest mb-1">PT Kaldu Sari Nabati Indonesia</p>
-                                    <h4 class="text-2xl font-extrabold text-slate-900 dark:text-white leading-tight">Nabati ProductDNA Design System</h4>
+                                    <h4 class="text-2xl font-extrabold text-slate-900 dark:text-white leading-tight">Nabati Product DNA Design System</h4>
                                 </div>
                                 <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-4">
                                     During probation I noticed a problem nobody was talking about: every developer built dashboards in their own style. The result was high cognitive load for users and zero visual consistency across the entire BI team. I took the initiative to build <strong class="text-slate-800 dark:text-white">Nabati's first BI design system</strong>, covering themes, templates, color systems, and formatting. All of it grounded in Nabati's product identity. Anyone who joins now works within a familiar visual language from day one.
@@ -303,7 +325,7 @@
                     </div>
 
                     <!-- FEATURED 4: Sentinel P&L -->
-                    <div class="group bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 overflow-hidden hover:border-rose-400 dark:hover:border-rose-500/50 hover:shadow-2xl dark:hover:shadow-[0_15px_40px_rgba(244,63,94,0.15)] transition duration-300 flex flex-col lg:flex-row">
+                    <div class="group bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 overflow-hidden hover:border-rose-400 dark:hover:border-rose-500/50 hover:shadow-2xl dark:hover:shadow-[0_15px_40px_rgba(244,63,94,0.15)] transition duration-300 flex flex-col lg:flex-row-reverse">
                         <div class="lg:w-2/5 h-56 lg:h-auto bg-gradient-to-br from-rose-100 to-red-200 dark:from-slate-700 dark:to-slate-600 relative overflow-hidden flex-shrink-0 flex items-center justify-center">
                             <img src="assets/images/projects/project-sentinel.png" alt="Sentinel P&L Dashboard" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.classList.add('hidden')">
                             
@@ -811,7 +833,7 @@
                 <!-- Bromo Experience Card -->
                 <div class="bg-slate-50 dark:bg-slate-800 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-xl dark:hover:shadow-[0_0_20px_rgba(6,182,212,0.15)] transition duration-300 flex flex-col group">
                     <div class="h-56 bg-slate-200 dark:bg-slate-700 relative overflow-hidden">
-                        <img src="assets/images/gallery/sby.HEIC" alt="Teaching at SD Ngadisari Bromo" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <img src="assets/images/gallery/sby.jpg" alt="Teaching at SD Ngadisari Bromo" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                         <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent"></div>
                         <div class="absolute bottom-4 left-4">
                             <span class="px-3 py-1 bg-blue-600/90 text-white text-xs font-bold uppercase tracking-wider rounded backdrop-blur-sm shadow-lg">1000 Guru Surabaya (TNT #33)</span>
@@ -842,7 +864,7 @@
                 <!-- Garut Experience Card -->
                 <div class="bg-slate-50 dark:bg-slate-800 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-xl dark:hover:shadow-[0_0_20px_rgba(6,182,212,0.15)] transition duration-300 flex flex-col group">
                     <div class="h-56 bg-slate-200 dark:bg-slate-700 relative overflow-hidden">
-                        <img src="assets/images/gallery/bdg.heic" alt="Teaching at SD 1 Panawa Garut" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <img src="assets/images/gallery/bdg.jpg" alt="Teaching at SD 1 Panawa Garut" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                         <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent"></div>
                         <div class="absolute bottom-4 left-4">
                             <span class="px-3 py-1 bg-blue-600/90 text-white text-xs font-bold uppercase tracking-wider rounded backdrop-blur-sm shadow-lg">1000 Guru Bandung (TNT #31)</span>
@@ -906,8 +928,56 @@
         </div>
     </footer>
 
+    <!-- Scroll to Top Button -->
+    <button id="scroll-to-top" aria-label="Scroll to top" class="fixed bottom-6 right-6 z-50 w-11 h-11 rounded-full bg-blue-600 dark:bg-cyan-500 text-white dark:text-slate-900 shadow-lg shadow-blue-200 dark:shadow-[0_0_15px_rgba(6,182,212,0.4)] flex items-center justify-center opacity-0 pointer-events-none transition-all duration-300 hover:bg-blue-700 dark:hover:bg-cyan-400 hover:scale-110">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 15l7-7 7 7"></path></svg>
+    </button>
+
     <!-- Scripts -->
     <script>
+        // Dropdown Nav (Projects & More)
+        function setupDropdown(wrapperId, btnId, menuId, chevronId) {
+            const wrapper = document.getElementById(wrapperId);
+            const btn = document.getElementById(btnId);
+            const menu = document.getElementById(menuId);
+            const chevron = document.getElementById(chevronId);
+
+            btn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const isOpen = !menu.classList.contains('hidden');
+                // Close all dropdowns first
+                document.querySelectorAll('.nav-dropdown-menu').forEach(m => m.classList.add('hidden'));
+                document.querySelectorAll('.nav-chevron').forEach(c => c.classList.remove('rotate-180'));
+                if (!isOpen) {
+                    menu.classList.remove('hidden');
+                    chevron.classList.add('rotate-180');
+                }
+            });
+
+            // Close when clicking a link inside
+            menu.querySelectorAll('.nav-dropdown-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    menu.classList.add('hidden');
+                    chevron.classList.remove('rotate-180');
+                });
+            });
+        }
+
+        setupDropdown('nav-projects-wrapper', 'nav-projects-btn', 'nav-projects-menu', 'nav-projects-chevron');
+        setupDropdown('nav-more-wrapper', 'nav-more-btn', 'nav-more-menu', 'nav-more-chevron');
+
+        // Add classes for global close
+        document.getElementById('nav-projects-menu').classList.add('nav-dropdown-menu');
+        document.getElementById('nav-more-menu').classList.add('nav-dropdown-menu');
+        document.getElementById('nav-projects-chevron').classList.add('nav-chevron');
+        document.getElementById('nav-more-chevron').classList.add('nav-chevron');
+
+        // Close dropdowns on outside click
+        document.addEventListener('click', () => {
+            document.querySelectorAll('.nav-dropdown-menu').forEach(m => m.classList.add('hidden'));
+            document.querySelectorAll('.nav-chevron').forEach(c => c.classList.remove('rotate-180'));
+        });
+
         // Theme (Dark/Light)
         const themeToggleBtn = document.getElementById('theme-toggle');
         const htmlElement = document.documentElement;
@@ -960,6 +1030,21 @@
                 btn.innerText = 'See more...';
             }
         }
+
+        // Scroll to Top
+        const scrollToTopBtn = document.getElementById('scroll-to-top');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 400) {
+                scrollToTopBtn.classList.remove('opacity-0', 'pointer-events-none');
+                scrollToTopBtn.classList.add('opacity-100');
+            } else {
+                scrollToTopBtn.classList.add('opacity-0', 'pointer-events-none');
+                scrollToTopBtn.classList.remove('opacity-100');
+            }
+        });
+        scrollToTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
 
         // Intersection Observer untuk Animasi Scroll pada Kartu Proyek
         document.addEventListener('DOMContentLoaded', () => {

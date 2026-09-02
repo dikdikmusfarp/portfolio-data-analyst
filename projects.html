@@ -33,14 +33,36 @@
             <a href="index.html" class="text-xl font-bold text-slate-900 dark:text-white tracking-tight">Dikdik <span class="text-blue-600 dark:text-cyan-400">Musfar</span></a>
             <div class="flex items-center gap-3">
                 <!-- Desktop Nav -->
-                <div class="hidden md:flex space-x-6 lg:space-x-8 text-sm font-semibold text-slate-600 dark:text-slate-400">
-                    <a href="index.html#about" class="hover:text-blue-600 dark:hover:text-cyan-400 transition">About</a>
-                    <a href="index.html#skills" class="hover:text-blue-600 dark:hover:text-cyan-400 transition">Skills</a>
-                    <a href="index.html#experience" class="hover:text-blue-600 dark:hover:text-cyan-400 transition">Experience</a>
-                    <a href="projects.html" class="text-blue-600 dark:text-cyan-400 transition">All Projects</a>
-                    <a href="index.html#certifications" class="hover:text-blue-600 dark:hover:text-cyan-400 transition">Certifications</a>
-                    <a href="index.html#testimonials" class="hover:text-blue-600 dark:hover:text-cyan-400 transition">Testimonials</a>
-                    <a href="index.html#social-impact" class="hover:text-blue-600 dark:hover:text-cyan-400 transition">Social Impact</a>
+                <div class="hidden md:flex items-center space-x-1 lg:space-x-2 text-sm font-semibold text-slate-600 dark:text-slate-400">
+                    <a href="index.html#about" class="px-3 py-1.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-blue-600 dark:hover:text-cyan-400 transition">About</a>
+
+                    <!-- Projects Dropdown -->
+                    <div class="relative" id="nav-projects-wrapper">
+                        <button id="nav-projects-btn" class="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-blue-50 dark:bg-cyan-900/20 text-blue-600 dark:text-cyan-400 transition">
+                            Projects
+                            <svg class="w-3.5 h-3.5 mt-0.5 transition-transform duration-200" id="nav-projects-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div id="nav-projects-menu" class="hidden absolute top-full left-0 mt-2 w-44 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl shadow-lg dark:shadow-[0_8px_24px_rgba(0,0,0,0.4)] overflow-hidden z-50">
+                            <a href="index.html#projects" class="nav-dropdown-link block px-4 py-2.5 text-sm text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700 hover:text-blue-600 dark:hover:text-cyan-400 transition">Featured Projects</a>
+                            <a href="projects.html" class="nav-dropdown-link block px-4 py-2.5 text-sm font-semibold text-blue-600 dark:text-cyan-400 bg-blue-50 dark:bg-cyan-900/20 border-t border-slate-100 dark:border-slate-700">All Projects</a>
+                        </div>
+                    </div>
+
+                    <a href="index.html#skills" class="px-3 py-1.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-blue-600 dark:hover:text-cyan-400 transition">Skills</a>
+                    <a href="index.html#experience" class="px-3 py-1.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-blue-600 dark:hover:text-cyan-400 transition">Experience</a>
+
+                    <!-- More Dropdown -->
+                    <div class="relative" id="nav-more-wrapper">
+                        <button id="nav-more-btn" class="flex items-center gap-1 px-3 py-1.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-blue-600 dark:hover:text-cyan-400 transition">
+                            More
+                            <svg class="w-3.5 h-3.5 mt-0.5 transition-transform duration-200" id="nav-more-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div id="nav-more-menu" class="hidden absolute top-full right-0 mt-2 w-44 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl shadow-lg dark:shadow-[0_8px_24px_rgba(0,0,0,0.4)] overflow-hidden z-50">
+                            <a href="index.html#certifications" class="nav-dropdown-link block px-4 py-2.5 text-sm text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700 hover:text-blue-600 dark:hover:text-cyan-400 transition">Certifications</a>
+                            <a href="index.html#testimonials" class="nav-dropdown-link block px-4 py-2.5 text-sm text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700 hover:text-blue-600 dark:hover:text-cyan-400 transition border-t border-slate-100 dark:border-slate-700">Testimonials</a>
+                            <a href="index.html#social-impact" class="nav-dropdown-link block px-4 py-2.5 text-sm text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700 hover:text-blue-600 dark:hover:text-cyan-400 transition border-t border-slate-100 dark:border-slate-700">Social Impact</a>
+                        </div>
+                    </div>
                 </div>
                 <!-- Theme Toggle -->
                 <button id="theme-toggle" class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-sm font-medium hover:ring-2 hover:ring-blue-500 dark:hover:ring-cyan-400 transition">
@@ -61,8 +83,10 @@
                 <a href="projects.html" class="mobile-nav-link px-4 py-2.5 rounded-lg text-sm font-semibold text-blue-600 dark:text-cyan-400 bg-blue-50 dark:bg-blue-900/20">All Projects</a>
                 <a href="index.html#skills" class="mobile-nav-link px-4 py-2.5 rounded-lg text-sm font-semibold text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-blue-600 dark:hover:text-cyan-400 transition">Skills</a>
                 <a href="index.html#experience" class="mobile-nav-link px-4 py-2.5 rounded-lg text-sm font-semibold text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-blue-600 dark:hover:text-cyan-400 transition">Experience</a>
+                <div class="border-t border-slate-100 dark:border-slate-800 my-1"></div>
                 <a href="index.html#certifications" class="mobile-nav-link px-4 py-2.5 rounded-lg text-sm font-semibold text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-blue-600 dark:hover:text-cyan-400 transition">Certifications</a>
                 <a href="index.html#testimonials" class="mobile-nav-link px-4 py-2.5 rounded-lg text-sm font-semibold text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-blue-600 dark:hover:text-cyan-400 transition">Testimonials</a>
+                <a href="index.html#social-impact" class="mobile-nav-link px-4 py-2.5 rounded-lg text-sm font-semibold text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-blue-600 dark:hover:text-cyan-400 transition">Social Impact</a>
                 <div class="border-t border-slate-200 dark:border-slate-800 mt-2 pt-3 flex gap-3">
                     <a href="mailto:dikdikmusfar@gmail.com" class="flex-1 text-center px-4 py-2.5 bg-blue-600 dark:bg-cyan-500 text-white dark:text-slate-900 text-sm font-bold rounded-lg hover:bg-blue-700 dark:hover:bg-cyan-400 transition">Email Me</a>
                     <a href="index.html" class="flex-1 text-center px-4 py-2.5 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-white text-sm font-semibold rounded-lg border border-slate-300 dark:border-slate-700 transition">Back to Home</a>
@@ -433,6 +457,46 @@
 
     <!-- Scripts -->
     <script>
+        // Dropdown Nav (Projects & More)
+        function setupDropdown(wrapperId, btnId, menuId, chevronId) {
+            const wrapper = document.getElementById(wrapperId);
+            const btn = document.getElementById(btnId);
+            const menu = document.getElementById(menuId);
+            const chevron = document.getElementById(chevronId);
+            if (!btn || !menu) return;
+
+            btn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const isOpen = !menu.classList.contains('hidden');
+                document.querySelectorAll('.nav-dropdown-menu').forEach(m => m.classList.add('hidden'));
+                document.querySelectorAll('.nav-chevron').forEach(c => c.classList.remove('rotate-180'));
+                if (!isOpen) {
+                    menu.classList.remove('hidden');
+                    chevron.classList.add('rotate-180');
+                }
+            });
+
+            menu.querySelectorAll('.nav-dropdown-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    menu.classList.add('hidden');
+                    chevron.classList.remove('rotate-180');
+                });
+            });
+        }
+
+        setupDropdown('nav-projects-wrapper', 'nav-projects-btn', 'nav-projects-menu', 'nav-projects-chevron');
+        setupDropdown('nav-more-wrapper', 'nav-more-btn', 'nav-more-menu', 'nav-more-chevron');
+
+        document.getElementById('nav-projects-menu').classList.add('nav-dropdown-menu');
+        document.getElementById('nav-more-menu').classList.add('nav-dropdown-menu');
+        document.getElementById('nav-projects-chevron').classList.add('nav-chevron');
+        document.getElementById('nav-more-chevron').classList.add('nav-chevron');
+
+        document.addEventListener('click', () => {
+            document.querySelectorAll('.nav-dropdown-menu').forEach(m => m.classList.add('hidden'));
+            document.querySelectorAll('.nav-chevron').forEach(c => c.classList.remove('rotate-180'));
+        });
+
         // Theme (Dark/Light)
         const themeToggleBtn = document.getElementById('theme-toggle');
         const htmlElement = document.documentElement;
